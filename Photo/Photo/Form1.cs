@@ -11,6 +11,9 @@ namespace WindowsFormsApplication1
 {
     public partial class Form1 : Form
     {
+
+        Image p;
+
         public Form1()
         {
             InitializeComponent();
@@ -36,9 +39,11 @@ namespace WindowsFormsApplication1
             {
                 try
                 {
-                    Image p = Image.FromFile(ofd.FileName);
+                    p = Image.FromFile(ofd.FileName);
                     pictureBox1.SetBounds(10,10,p.Width,p.Height);
                     pictureBox1.Image = p;
+                   
+                    
                 }
                 catch (Exception ) {
                     
@@ -50,6 +55,16 @@ namespace WindowsFormsApplication1
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Bitmap b = new Bitmap(p);
+            Bitmap rez=new Bitmap(50,50);
+            Graphics graphics = Graphics.FromImage(rez); // Graphics для рисования на smallImage
+            graphics.DrawImage(b, new Point(-25, -25)); // Рисуем bigImage на smallImage, где (-25, -25) координата положения верхнего левого угла bigImage на smallImage
+            graphics.Dispose(); // Закрываем graphics
+            pictureBox1.Image = rez;
         }
     }
 }
