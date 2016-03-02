@@ -66,5 +66,18 @@ namespace WindowsFormsApplication1
             graphics.Dispose(); // Закрываем graphics
             pictureBox1.Image = rez;
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Bitmap b = new Bitmap(pictureBox1.Image);
+            SaveFileDialog sfd=new SaveFileDialog();
+            
+            sfd.ShowDialog();
+            if (sfd.FileName!=null) {
+                b.Save(sfd.FileName);
+            }
+        }
+
+
     }
 }
