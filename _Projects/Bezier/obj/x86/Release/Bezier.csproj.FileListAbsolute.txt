@@ -1,0 +1,11 @@
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Bezier\bin\Release\Bezier.exe
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Bezier\bin\Release\Bezier.pdb
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Bezier\bin\Release\rv.dll
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Bezier\bin\Release\rv.pdb
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Bezier\obj\x86\Release\ResolveAssemblyReference.cache
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Bezier\obj\x86\Release\Bezier.frmBezier.resources
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Bezier\obj\x86\Release\Bezier.Properties.Resources.resources
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Bezier\obj\x86\Release\GenerateResource.read.1.tlog
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Bezier\obj\x86\Release\GenerateResource.write.1.tlog
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Bezier\obj\x86\Release\Bezier.exe
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Bezier\obj\x86\Release\Bezier.pdb

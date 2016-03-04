@@ -1,0 +1,14 @@
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Video\bin\Release\Video.exe
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Video\bin\Release\Video.pdb
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Video\bin\Release\Interop.WMPLib.dll
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Video\bin\Release\AxInterop.WMPLib.dll
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Video\obj\x86\Release\ResolveAssemblyReference.cache
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Video\obj\x86\Release\Interop.WMPLib.dll
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Video\obj\x86\Release\AxInterop.WMPLib.dll
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Video\obj\x86\Release\Video.csproj.ResolveComReference.cache
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Video\obj\x86\Release\Video.frmVideo.resources
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Video\obj\x86\Release\Video.Properties.Resources.resources
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Video\obj\x86\Release\GenerateResource.read.1.tlog
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Video\obj\x86\Release\GenerateResource.write.1.tlog
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Video\obj\x86\Release\Video.exe
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Video\obj\x86\Release\Video.pdb

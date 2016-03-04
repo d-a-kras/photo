@@ -1,0 +1,18 @@
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\ScreenShot\bin\Debug\ScreenShot.exe
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\ScreenShot\bin\Debug\ScreenShot.pdb
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\ScreenShot\obj\x86\Debug\ResolveAssemblyReference.cache
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\ScreenShot\obj\x86\Debug\ScreenShot.frmScreenShot.resources
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\ScreenShot\obj\x86\Debug\ScreenShot.Properties.Resources.resources
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\ScreenShot\obj\x86\Debug\GenerateResource.read.1.tlog
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\ScreenShot\obj\x86\Debug\GenerateResource.write.1.tlog
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\ScreenShot\obj\x86\Debug\ScreenShot.exe
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\ScreenShot\obj\x86\Debug\ScreenShot.pdb
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\ScreenShot\bin\Debug\ScreenShot.exe
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\ScreenShot\bin\Debug\ScreenShot.pdb
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\ScreenShot\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\ScreenShot\obj\x86\Debug\ScreenShot.frmScreenShot.resources
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\ScreenShot\obj\x86\Debug\ScreenShot.Properties.Resources.resources
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\ScreenShot\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\ScreenShot\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\ScreenShot\obj\x86\Debug\ScreenShot.exe
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\ScreenShot\obj\x86\Debug\ScreenShot.pdb

@@ -1,0 +1,27 @@
+I:\____ЗАНИМАТЕЛЬНЫЕ УРОКИ С СИ-ШАРПОМ\_Source\WindowsFormsApplications\DashCap\obj\x86\Debug\ResolveAssemblyReference.cache
+I:\____ЗАНИМАТЕЛЬНЫЕ УРОКИ С СИ-ШАРПОМ\_Source\WindowsFormsApplications\DashCap\obj\x86\Debug\DashCap.frmDashCap.resources
+I:\____ЗАНИМАТЕЛЬНЫЕ УРОКИ С СИ-ШАРПОМ\_Source\WindowsFormsApplications\DashCap\obj\x86\Debug\DashCap.Properties.Resources.resources
+I:\____ЗАНИМАТЕЛЬНЫЕ УРОКИ С СИ-ШАРПОМ\_Source\WindowsFormsApplications\DashCap\obj\x86\Debug\GenerateResource.read.1.tlog
+I:\____ЗАНИМАТЕЛЬНЫЕ УРОКИ С СИ-ШАРПОМ\_Source\WindowsFormsApplications\DashCap\obj\x86\Debug\GenerateResource.write.1.tlog
+I:\____ЗАНИМАТЕЛЬНЫЕ УРОКИ С СИ-ШАРПОМ\_Source\WindowsFormsApplications\DashCap\bin\Debug\DashCap.exe
+I:\____ЗАНИМАТЕЛЬНЫЕ УРОКИ С СИ-ШАРПОМ\_Source\WindowsFormsApplications\DashCap\bin\Debug\DashCap.pdb
+I:\____ЗАНИМАТЕЛЬНЫЕ УРОКИ С СИ-ШАРПОМ\_Source\WindowsFormsApplications\DashCap\obj\x86\Debug\DashCap.exe
+I:\____ЗАНИМАТЕЛЬНЫЕ УРОКИ С СИ-ШАРПОМ\_Source\WindowsFormsApplications\DashCap\obj\x86\Debug\DashCap.pdb
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\DashCap\obj\x86\Debug\DashCap.exe
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\DashCap\obj\x86\Debug\DashCap.pdb
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\DashCap\bin\Debug\DashCap.exe
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\DashCap\bin\Debug\DashCap.pdb
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\DashCap\obj\x86\Debug\ResolveAssemblyReference.cache
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\DashCap\obj\x86\Debug\DashCap.frmDashCap.resources
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\DashCap\obj\x86\Debug\DashCap.Properties.Resources.resources
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\DashCap\obj\x86\Debug\GenerateResource.read.1.tlog
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\DashCap\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\DashCap\bin\Debug\DashCap.exe
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\DashCap\bin\Debug\DashCap.pdb
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\DashCap\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\DashCap\obj\x86\Debug\DashCap.frmDashCap.resources
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\DashCap\obj\x86\Debug\DashCap.Properties.Resources.resources
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\DashCap\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\DashCap\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\DashCap\obj\x86\Debug\DashCap.exe
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\DashCap\obj\x86\Debug\DashCap.pdb

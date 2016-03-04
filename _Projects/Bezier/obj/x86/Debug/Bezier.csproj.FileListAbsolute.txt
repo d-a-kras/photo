@@ -1,0 +1,33 @@
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Bezier\obj\x86\Debug\ResolveAssemblyReference.cache
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Bezier\obj\x86\Debug\Bezier.frmBezier.resources
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Bezier\obj\x86\Debug\GenerateResource.read.1.tlog
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Bezier\obj\x86\Debug\GenerateResource.write.1.tlog
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Bezier\bin\Debug\rv.dll
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Bezier\bin\Debug\rv.pdb
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Bezier\bin\Debug\Bezier.exe
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Bezier\bin\Debug\Bezier.pdb
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Bezier\obj\x86\Debug\Bezier.Properties.Resources.resources
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Bezier\obj\x86\Debug\Bezier.exe
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Bezier\obj\x86\Debug\Bezier.pdb
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Bezier\bin\Debug\Bezier.exe
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Bezier\bin\Debug\Bezier.pdb
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Bezier\bin\Debug\rv.dll
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Bezier\bin\Debug\rv.pdb
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Bezier\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Bezier\obj\x86\Debug\Bezier.frmBezier.resources
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Bezier\obj\x86\Debug\Bezier.Properties.Resources.resources
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Bezier\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Bezier\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Bezier\obj\x86\Debug\Bezier.exe
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Bezier\obj\x86\Debug\Bezier.pdb
+G:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Bezier\bin\Debug\Bezier.exe
+G:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Bezier\bin\Debug\Bezier.pdb
+G:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Bezier\bin\Debug\rv.dll
+G:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Bezier\bin\Debug\rv.pdb
+G:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Bezier\obj\x86\Debug\ResolveAssemblyReference.cache
+G:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Bezier\obj\x86\Debug\Bezier.frmBezier.resources
+G:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Bezier\obj\x86\Debug\Bezier.Properties.Resources.resources
+G:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Bezier\obj\x86\Debug\GenerateResource.read.1.tlog
+G:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Bezier\obj\x86\Debug\GenerateResource.write.1.tlog
+G:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Bezier\obj\x86\Debug\Bezier.exe
+G:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Bezier\obj\x86\Debug\Bezier.pdb

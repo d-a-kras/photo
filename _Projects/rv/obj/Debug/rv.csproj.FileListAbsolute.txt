@@ -1,0 +1,21 @@
+I:\____ЗАНИМАТЕЛЬНЫЕ УРОКИ С СИ-ШАРПОМ\_Source\WindowsFormsApplications\rv\bin\Debug\rv.dll
+I:\____ЗАНИМАТЕЛЬНЫЕ УРОКИ С СИ-ШАРПОМ\_Source\WindowsFormsApplications\rv\bin\Debug\rv.pdb
+I:\____ЗАНИМАТЕЛЬНЫЕ УРОКИ С СИ-ШАРПОМ\_Source\WindowsFormsApplications\rv\obj\Debug\ResolveAssemblyReference.cache
+I:\____ЗАНИМАТЕЛЬНЫЕ УРОКИ С СИ-ШАРПОМ\_Source\WindowsFormsApplications\rv\obj\Debug\rv.dll
+I:\____ЗАНИМАТЕЛЬНЫЕ УРОКИ С СИ-ШАРПОМ\_Source\WindowsFormsApplications\rv\obj\Debug\rv.pdb
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\rv\bin\Debug\rv.dll
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\rv\bin\Debug\rv.pdb
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\rv\obj\Debug\ResolveAssemblyReference.cache
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\rv\obj\Debug\rv.dll
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\rv\obj\Debug\rv.pdb
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\rv\obj\Debug\GenerateResource.read.1.tlog
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\rv\obj\Debug\GenerateResource.write.1.tlog
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\rv\obj\Debug\rv.Resource.resources
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\rv\bin\Debug\rv.dll
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\rv\bin\Debug\rv.pdb
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\rv\obj\Debug\ResolveAssemblyReference.cache
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\rv\obj\Debug\rv.Resource.resources
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\rv\obj\Debug\GenerateResource.read.1.tlog
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\rv\obj\Debug\GenerateResource.write.1.tlog
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\rv\obj\Debug\rv.dll
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\rv\obj\Debug\rv.pdb

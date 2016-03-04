@@ -1,0 +1,18 @@
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Стрелки\bin\Debug\Стрелки.exe
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Стрелки\bin\Debug\Стрелки.pdb
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Стрелки\obj\x86\Debug\ResolveAssemblyReference.cache
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Стрелки\obj\x86\Debug\Стрелки.frmArrows.resources
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Стрелки\obj\x86\Debug\Стрелки.Properties.Resources.resources
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Стрелки\obj\x86\Debug\GenerateResource.read.1.tlog
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Стрелки\obj\x86\Debug\GenerateResource.write.1.tlog
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Стрелки\obj\x86\Debug\Стрелки.exe
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Стрелки\obj\x86\Debug\Стрелки.pdb
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Стрелки\bin\Debug\Стрелки.exe
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Стрелки\bin\Debug\Стрелки.pdb
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Стрелки\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Стрелки\obj\x86\Debug\Стрелки.frmArrows.resources
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Стрелки\obj\x86\Debug\Стрелки.Properties.Resources.resources
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Стрелки\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Стрелки\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Стрелки\obj\x86\Debug\Стрелки.exe
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\Стрелки\obj\x86\Debug\Стрелки.pdb

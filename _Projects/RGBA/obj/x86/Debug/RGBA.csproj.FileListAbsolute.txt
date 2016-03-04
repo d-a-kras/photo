@@ -1,0 +1,27 @@
+I:\____ЗАНИМАТЕЛЬНЫЕ УРОКИ С СИ-ШАРПОМ\_Source\WindowsFormsApplications\RGBA\obj\x86\Debug\ResolveAssemblyReference.cache
+I:\____ЗАНИМАТЕЛЬНЫЕ УРОКИ С СИ-ШАРПОМ\_Source\WindowsFormsApplications\RGBA\obj\x86\Debug\RGBA.Properties.Resources.resources
+I:\____ЗАНИМАТЕЛЬНЫЕ УРОКИ С СИ-ШАРПОМ\_Source\WindowsFormsApplications\RGBA\obj\x86\Debug\GenerateResource.read.1.tlog
+I:\____ЗАНИМАТЕЛЬНЫЕ УРОКИ С СИ-ШАРПОМ\_Source\WindowsFormsApplications\RGBA\obj\x86\Debug\GenerateResource.write.1.tlog
+I:\____ЗАНИМАТЕЛЬНЫЕ УРОКИ С СИ-ШАРПОМ\_Source\WindowsFormsApplications\RGBA\obj\x86\Debug\RGBA.frmRGBA.resources
+I:\____ЗАНИМАТЕЛЬНЫЕ УРОКИ С СИ-ШАРПОМ\_Source\WindowsFormsApplications\RGBA\bin\Debug\RGBA.exe
+I:\____ЗАНИМАТЕЛЬНЫЕ УРОКИ С СИ-ШАРПОМ\_Source\WindowsFormsApplications\RGBA\bin\Debug\RGBA.pdb
+I:\____ЗАНИМАТЕЛЬНЫЕ УРОКИ С СИ-ШАРПОМ\_Source\WindowsFormsApplications\RGBA\obj\x86\Debug\RGBA.exe
+I:\____ЗАНИМАТЕЛЬНЫЕ УРОКИ С СИ-ШАРПОМ\_Source\WindowsFormsApplications\RGBA\obj\x86\Debug\RGBA.pdb
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\RGBA\obj\x86\Debug\RGBA.exe
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\RGBA\obj\x86\Debug\RGBA.pdb
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\RGBA\bin\Debug\RGBA.exe
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\RGBA\bin\Debug\RGBA.pdb
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\RGBA\obj\x86\Debug\ResolveAssemblyReference.cache
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\RGBA\obj\x86\Debug\RGBA.frmRGBA.resources
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\RGBA\obj\x86\Debug\RGBA.Properties.Resources.resources
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\RGBA\obj\x86\Debug\GenerateResource.read.1.tlog
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\RGBA\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\RGBA\bin\Debug\RGBA.exe
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\RGBA\bin\Debug\RGBA.pdb
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\RGBA\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\RGBA\obj\x86\Debug\RGBA.frmRGBA.resources
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\RGBA\obj\x86\Debug\RGBA.Properties.Resources.resources
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\RGBA\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\RGBA\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\RGBA\obj\x86\Debug\RGBA.exe
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\RGBA\obj\x86\Debug\RGBA.pdb

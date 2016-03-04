@@ -1,0 +1,27 @@
+I:\____ЗАНИМАТЕЛЬНЫЕ УРОКИ С СИ-ШАРПОМ\_Source\WindowsFormsApplications\SelectColor\bin\Debug\SelectColor.exe
+I:\____ЗАНИМАТЕЛЬНЫЕ УРОКИ С СИ-ШАРПОМ\_Source\WindowsFormsApplications\SelectColor\bin\Debug\SelectColor.pdb
+I:\____ЗАНИМАТЕЛЬНЫЕ УРОКИ С СИ-ШАРПОМ\_Source\WindowsFormsApplications\SelectColor\obj\x86\Debug\ResolveAssemblyReference.cache
+I:\____ЗАНИМАТЕЛЬНЫЕ УРОКИ С СИ-ШАРПОМ\_Source\WindowsFormsApplications\SelectColor\obj\x86\Debug\SelectColor.Form1.resources
+I:\____ЗАНИМАТЕЛЬНЫЕ УРОКИ С СИ-ШАРПОМ\_Source\WindowsFormsApplications\SelectColor\obj\x86\Debug\SelectColor.Properties.Resources.resources
+I:\____ЗАНИМАТЕЛЬНЫЕ УРОКИ С СИ-ШАРПОМ\_Source\WindowsFormsApplications\SelectColor\obj\x86\Debug\GenerateResource.read.1.tlog
+I:\____ЗАНИМАТЕЛЬНЫЕ УРОКИ С СИ-ШАРПОМ\_Source\WindowsFormsApplications\SelectColor\obj\x86\Debug\GenerateResource.write.1.tlog
+I:\____ЗАНИМАТЕЛЬНЫЕ УРОКИ С СИ-ШАРПОМ\_Source\WindowsFormsApplications\SelectColor\obj\x86\Debug\SelectColor.exe
+I:\____ЗАНИМАТЕЛЬНЫЕ УРОКИ С СИ-ШАРПОМ\_Source\WindowsFormsApplications\SelectColor\obj\x86\Debug\SelectColor.pdb
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\SelectColor\obj\x86\Debug\SelectColor.exe
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\SelectColor\obj\x86\Debug\SelectColor.pdb
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\SelectColor\bin\Debug\SelectColor.exe
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\SelectColor\bin\Debug\SelectColor.pdb
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\SelectColor\obj\x86\Debug\ResolveAssemblyReference.cache
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\SelectColor\obj\x86\Debug\SelectColor.Form1.resources
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\SelectColor\obj\x86\Debug\SelectColor.Properties.Resources.resources
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\SelectColor\obj\x86\Debug\GenerateResource.read.1.tlog
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\SelectColor\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\SelectColor\bin\Debug\SelectColor.exe
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\SelectColor\bin\Debug\SelectColor.pdb
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\SelectColor\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\SelectColor\obj\x86\Debug\SelectColor.Form1.resources
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\SelectColor\obj\x86\Debug\SelectColor.Properties.Resources.resources
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\SelectColor\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\SelectColor\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\SelectColor\obj\x86\Debug\SelectColor.exe
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\SelectColor\obj\x86\Debug\SelectColor.pdb

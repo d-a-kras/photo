@@ -1,0 +1,27 @@
+I:\____ЗАНИМАТЕЛЬНЫЕ УРОКИ С СИ-ШАРПОМ\_Source\WindowsFormsApplications\LineJoin\bin\Debug\LineJoin.exe
+I:\____ЗАНИМАТЕЛЬНЫЕ УРОКИ С СИ-ШАРПОМ\_Source\WindowsFormsApplications\LineJoin\bin\Debug\LineJoin.pdb
+I:\____ЗАНИМАТЕЛЬНЫЕ УРОКИ С СИ-ШАРПОМ\_Source\WindowsFormsApplications\LineJoin\obj\x86\Debug\ResolveAssemblyReference.cache
+I:\____ЗАНИМАТЕЛЬНЫЕ УРОКИ С СИ-ШАРПОМ\_Source\WindowsFormsApplications\LineJoin\obj\x86\Debug\LineJoin.Properties.Resources.resources
+I:\____ЗАНИМАТЕЛЬНЫЕ УРОКИ С СИ-ШАРПОМ\_Source\WindowsFormsApplications\LineJoin\obj\x86\Debug\GenerateResource.read.1.tlog
+I:\____ЗАНИМАТЕЛЬНЫЕ УРОКИ С СИ-ШАРПОМ\_Source\WindowsFormsApplications\LineJoin\obj\x86\Debug\GenerateResource.write.1.tlog
+I:\____ЗАНИМАТЕЛЬНЫЕ УРОКИ С СИ-ШАРПОМ\_Source\WindowsFormsApplications\LineJoin\obj\x86\Debug\LineJoin.exe
+I:\____ЗАНИМАТЕЛЬНЫЕ УРОКИ С СИ-ШАРПОМ\_Source\WindowsFormsApplications\LineJoin\obj\x86\Debug\LineJoin.pdb
+I:\____ЗАНИМАТЕЛЬНЫЕ УРОКИ С СИ-ШАРПОМ\_Source\WindowsFormsApplications\LineJoin\obj\x86\Debug\LineJoin.frmLineJoin.resources
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\LineJoin\obj\x86\Debug\LineJoin.exe
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\LineJoin\obj\x86\Debug\LineJoin.pdb
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\LineJoin\bin\Debug\LineJoin.exe
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\LineJoin\bin\Debug\LineJoin.pdb
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\LineJoin\obj\x86\Debug\ResolveAssemblyReference.cache
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\LineJoin\obj\x86\Debug\LineJoin.frmLineJoin.resources
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\LineJoin\obj\x86\Debug\LineJoin.Properties.Resources.resources
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\LineJoin\obj\x86\Debug\GenerateResource.read.1.tlog
+I:\___ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\LineJoin\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\LineJoin\bin\Debug\LineJoin.exe
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\LineJoin\bin\Debug\LineJoin.pdb
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\LineJoin\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\LineJoin\obj\x86\Debug\LineJoin.frmLineJoin.resources
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\LineJoin\obj\x86\Debug\LineJoin.Properties.Resources.resources
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\LineJoin\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\LineJoin\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\LineJoin\obj\x86\Debug\LineJoin.exe
+E:\___CS2 ЗАНИМАТЕЛЬНАЯ ГРАФИКА НА СИ-ШАРПЕ\_Projects\LineJoin\obj\x86\Debug\LineJoin.pdb
