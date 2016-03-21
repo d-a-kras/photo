@@ -19,3 +19,9 @@ D:\photo\Photo\Photo\obj\x86\Debug\Photo.csprojResolveAssemblyReference.cache
 D:\photo\Photo\Photo\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
 D:\photo\Photo\Photo\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
 D:\photo\Photo\Photo\obj\x86\Debug\Photo.csproj.GenerateResource.Cache
+C:\Users\kras\Documents\GitHub\photo\Photo\Photo\obj\x86\Debug\Photo.csprojResolveAssemblyReference.cache
+C:\Users\kras\Documents\GitHub\photo\Photo\Photo\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\kras\Documents\GitHub\photo\Photo\Photo\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\kras\Documents\GitHub\photo\Photo\Photo\obj\x86\Debug\Photo.csproj.GenerateResource.Cache
+C:\Users\kras\Documents\GitHub\photo\Photo\Photo\bin\Debug\Photo.exe
+C:\Users\kras\Documents\GitHub\photo\Photo\Photo\bin\Debug\Photo.pdb

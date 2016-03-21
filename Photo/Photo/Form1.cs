@@ -16,11 +16,16 @@ namespace WindowsFormsApplication1
     {
 
         Image p;
+        static System.Drawing.Drawing2D.GraphicsState m;
+        Graphics g;
+       
 
         public Form1()
         {
             InitializeComponent();
-            // pictureBox1.set
+            lv.Visible = false;
+            pn.Visible = false;
+            bp.Visible = false;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -66,7 +71,8 @@ namespace WindowsFormsApplication1
 
         private void обрезатьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            lv.Visible = true;
+            pn.Visible = true;
         }
 
         private void открытьToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -116,12 +122,18 @@ namespace WindowsFormsApplication1
 
         private void обрезатьToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            Bitmap b = new Bitmap(p);
-            Bitmap rez = new Bitmap(50, 50);
-            Graphics graphics = Graphics.FromImage(rez); // Graphics для рисования на smallImage
-            graphics.DrawImage(b, new Point(-25, -25)); // Рисуем bigImage на smallImage, где (-25, -25) координата положения верхнего левого угла bigImage на smallImage
-            graphics.Dispose(); // Закрываем graphics
-            pictureBox1.Image = rez;
+            lv.Visible = true;
+            pn.Visible = true;
+            bp.Visible = true;
+            g = Graphics.FromHwnd(this.Handle);
+            m = g.Save();
+            Rectangle r = new Rectangle(lv.Location.X + 20, lv.Location.Y + 20, pn.Location.X - 50, pn.Location.Y - 80);
+            g.DrawRectangle(Pens.Black, r);
+            //m=System.Drawing.Graphics.Save();
+            
+            
+            g.Dispose();
+         
         }
 
         private void выходToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -193,6 +205,62 @@ namespace WindowsFormsApplication1
         {
 
         }
+
+        private void lv_Click(object sender, EventArgs e)
+        {
+            g.Restore(m);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bp_Click(object sender, EventArgs e)
+        {
+              Bitmap b = new Bitmap(p);
+              Bitmap rez = new Bitmap( pn.Location.X-lv.Location.X , pn.Location.Y - lv.Location.Y);
+            Graphics graphics = Graphics.FromImage(rez); // Graphics для рисования на smallImage
+            graphics.DrawImage(b, new Point(lv.Location.X, lv.Location.Y)); // Рисуем bigImage на smallImage, где (-25, -25) координата положения верхнего левого угла bigImage на smallImage
+            graphics.Dispose(); // Закрываем graphics
+            pictureBox1.Image = rez;
+        }
+
+     
     }
 
+}
+
+class MyButton : Button
+{
+    //точка перемещения
+    Point DownPoint;
+    //нажата ли кнопка мыши
+    bool IsDragMode;
+
+    protected override void OnMouseDown(MouseEventArgs mevent)
+    {
+        DownPoint = mevent.Location;
+        IsDragMode = true;
+        base.OnMouseDown(mevent);
+    }
+
+    protected override void OnMouseUp(MouseEventArgs mevent)
+    {
+        IsDragMode = false;
+        base.OnMouseUp(mevent);
+    }
+
+    protected override void OnMouseMove(MouseEventArgs mevent)
+    {
+        //если кнопка мыши нажата
+        if (IsDragMode)
+        {
+            Point p = mevent.Location;
+            //вычисляем разницу в координатах между положением курсора и "нулевой" точкой кнопки
+            Point dp = new Point(p.X - DownPoint.X, p.Y - DownPoint.Y);
+            Location = new Point(Location.X + dp.X, Location.Y + dp.Y);
+        }
+        base.OnMouseMove(mevent);
+    }
 }
