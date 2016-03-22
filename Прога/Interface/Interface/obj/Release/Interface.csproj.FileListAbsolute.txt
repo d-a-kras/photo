@@ -1,0 +1,16 @@
+c:\users\александр\documents\visual studio 2013\Projects\Interface\Interface\bin\Release\Interface.exe.config
+c:\users\александр\documents\visual studio 2013\Projects\Interface\Interface\bin\Release\Interface.exe
+c:\users\александр\documents\visual studio 2013\Projects\Interface\Interface\bin\Release\Interface.pdb
+c:\users\александр\documents\visual studio 2013\Projects\Interface\Interface\obj\Release\Interface.Form1.resources
+c:\users\александр\documents\visual studio 2013\Projects\Interface\Interface\obj\Release\Interface.Form2.resources
+c:\users\александр\documents\visual studio 2013\Projects\Interface\Interface\obj\Release\Interface.Form3.resources
+c:\users\александр\documents\visual studio 2013\Projects\Interface\Interface\obj\Release\Interface.Form4.resources
+c:\users\александр\documents\visual studio 2013\Projects\Interface\Interface\obj\Release\Interface.Properties.Resources.resources
+c:\users\александр\documents\visual studio 2013\Projects\Interface\Interface\obj\Release\Interface.csproj.GenerateResource.Cache
+c:\users\александр\documents\visual studio 2013\Projects\Interface\Interface\obj\Release\Interface.exe
+c:\users\александр\documents\visual studio 2013\Projects\Interface\Interface\obj\Release\Interface.pdb
+c:\users\александр\documents\visual studio 2013\Projects\Interface\Interface\obj\Release\Interface.csprojResolveAssemblyReference.cache
+C:\Users\Александр\documents\visual studio 2013\Projects\Interface\Interface\obj\Release\Interface.Form5.resources
+C:\Users\Александр\Desktop\Interface\Interface\bin\Release\Interface.exe.config
+C:\Users\Александр\Desktop\Interface\Interface\obj\Release\Interface.exe
+C:\Users\Александр\Desktop\Interface\Interface\obj\Release\Interface.pdb

@@ -1,8 +1,0 @@
-C:\Users\kras\Documents\GitHub\photo\Photo\Photo\bin\Release\Photo.exe
-C:\Users\kras\Documents\GitHub\photo\Photo\Photo\bin\Release\Photo.pdb
-C:\Users\kras\Documents\GitHub\photo\Photo\Photo\obj\x86\Release\WindowsFormsApplication1.Form1.resources
-C:\Users\kras\Documents\GitHub\photo\Photo\Photo\obj\x86\Release\WindowsFormsApplication1.Properties.Resources.resources
-C:\Users\kras\Documents\GitHub\photo\Photo\Photo\obj\x86\Release\Photo.csproj.GenerateResource.Cache
-C:\Users\kras\Documents\GitHub\photo\Photo\Photo\obj\x86\Release\Photo.exe
-C:\Users\kras\Documents\GitHub\photo\Photo\Photo\obj\x86\Release\Photo.pdb
-C:\Users\kras\Documents\GitHub\photo\Photo\Photo\obj\x86\Release\Photo.csprojResolveAssemblyReference.cache
