@@ -1,0 +1,11 @@
+C:\Users\Александр\Downloads\Program\Program\bin\Release\Program.exe.config
+C:\Users\Александр\Downloads\Program\Program\bin\Release\Program.exe
+C:\Users\Александр\Downloads\Program\Program\bin\Release\Program.pdb
+C:\Users\Александр\Downloads\Program\Program\obj\Release\Program.csprojResolveAssemblyReference.cache
+C:\Users\Александр\Downloads\Program\Program\obj\Release\Program.Form1.resources
+C:\Users\Александр\Downloads\Program\Program\obj\Release\Program.Form2.resources
+C:\Users\Александр\Downloads\Program\Program\obj\Release\Program.Form3.resources
+C:\Users\Александр\Downloads\Program\Program\obj\Release\Program.Properties.Resources.resources
+C:\Users\Александр\Downloads\Program\Program\obj\Release\Program.csproj.GenerateResource.Cache
+C:\Users\Александр\Downloads\Program\Program\obj\Release\Program.exe
+C:\Users\Александр\Downloads\Program\Program\obj\Release\Program.pdb
