@@ -30,3 +30,14 @@ C:\Users\Александр\Downloads\Program\Program\obj\Debug\Program.Form2.re
 C:\Users\Александр\Downloads\Program\Program\obj\Debug\Program.Form3.resources
 C:\Users\Александр\Downloads\Program\Program\obj\Debug\Program.Properties.Resources.resources
 C:\Users\Александр\Downloads\Program\Program\obj\Debug\Program.csproj.GenerateResource.Cache
+C:\Users\kras\Documents\GitHub\photo\Прога\Program\Program\bin\Debug\Program.exe.config
+C:\Users\kras\Documents\GitHub\photo\Прога\Program\Program\obj\Debug\Program.exe
+C:\Users\kras\Documents\GitHub\photo\Прога\Program\Program\obj\Debug\Program.pdb
+C:\Users\kras\Documents\GitHub\photo\Прога\Program\Program\bin\Debug\Program.exe
+C:\Users\kras\Documents\GitHub\photo\Прога\Program\Program\bin\Debug\Program.pdb
+C:\Users\kras\Documents\GitHub\photo\Прога\Program\Program\obj\Debug\Program.csprojResolveAssemblyReference.cache
+C:\Users\kras\Documents\GitHub\photo\Прога\Program\Program\obj\Debug\Program.Form1.resources
+C:\Users\kras\Documents\GitHub\photo\Прога\Program\Program\obj\Debug\Program.Form2.resources
+C:\Users\kras\Documents\GitHub\photo\Прога\Program\Program\obj\Debug\Program.Form3.resources
+C:\Users\kras\Documents\GitHub\photo\Прога\Program\Program\obj\Debug\Program.Properties.Resources.resources
+C:\Users\kras\Documents\GitHub\photo\Прога\Program\Program\obj\Debug\Program.csproj.GenerateResource.Cache
