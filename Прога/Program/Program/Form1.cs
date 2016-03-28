@@ -26,10 +26,9 @@ namespace Program
         public byte div, offset;
         public int kernel_w, kernel_h;
         public int[,] kernel;
-        public Bitmap origin_size_image, image_l, nashville1, win;
-        public ImagerBitmap dst, dsp, image_l1;
+        public Bitmap  nashville1, win;
         public float w, h;
-        public int a;
+      
 
         //открытие изображения
         private void открытьToolStripMenuItem_Click(object sender, EventArgs e)
@@ -43,16 +42,40 @@ namespace Program
                     full_name_of_image = open_dialog.FileName;
                     image = new Bitmap(open_dialog.FileName);
                     //this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-                    this.Width = image.Width + 40;
-                    this.Height = image.Height + 75;
-                    this.pictureBox1.Size = image.Size;
-                    pictureBox1.Image = image;
+                    
+          
                     pictureBox1.Invalidate(); //????
                     //получение матрицы с пикселями
                     pixel = new UInt32[image.Height, image.Width];
                     for (int y = 0; y < image.Height; y++)
                         for (int x = 0; x < image.Width; x++)
                             pixel[y, x] = (UInt32)(image.GetPixel(x, y).ToArgb());
+                    
+                    w = image.Width;
+                    h = image.Height;
+
+                    if (image.Width >= 150 && image.Width >= image.Height)
+                    {
+                        float k = (float)image.Width / 150;
+                        w = 150;
+                        h = image.Height / k;
+                    }
+                    else if (image.Height >= 120 && image.Width < image.Height)
+                    {
+                        float k = (float)image.Height / 120;
+                        h = 120;
+                        w = image.Width / k;
+
+                    }
+                    image= new Bitmap(image, (int)w, (int)h);
+
+                    
+                    this.Width = image.Width + 40;
+                    this.Height = image.Height + 75;
+                    this.pictureBox1.Size = image.Size;
+                    pictureBox1.Image = image;
+                    
+
                 }
                 catch
                 {
@@ -61,10 +84,7 @@ namespace Program
                     "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            if (origin_size_image != null)
-            {
-                origin_size_image.Dispose();
-            }
+          
 
         
             w = image.Width;
@@ -170,10 +190,7 @@ namespace Program
             pictureBox1.Image = image;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
+  
 
         private void выходToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -253,7 +270,7 @@ namespace Program
             else MessageBox.Show("Выбирите файл");
         }
     
-     void sharpen()
+         void sharpen()
         {
             kernel = new int[3, 3];
 
@@ -346,8 +363,9 @@ namespace Program
 
             GC.Collect();
             win = new Bitmap(Properties.Resources.ramka, (int)w, (int)h);
-            dst = new ImagerBitmap(image);
-            dsp = new ImagerBitmap(win);
+           // Bitmap bp = new Bitmap(image);
+            Bitmap dst = new Bitmap(image);
+            Bitmap dsp = new Bitmap(win);
 
             Enumerable.Range(0, (int)w).AsParallel().ForAll(x =>
             {
@@ -376,10 +394,8 @@ namespace Program
                     dst.SetPixel(x, y, Color.FromArgb((byte)(r * (1 - brght1) + r1 * brght1), (byte)(g * (1 - brght1) + g1 * brght1), (byte)(b * (1 - brght1) + b1 * brght1)));
                 }
             });
-
-            dst.UnlockBitmap();
-            dsp.UnlockBitmap();
-            image_l = dst.Bitmap;
+            image = dst;
+            pictureBox1.Image = dst;
         }
 
         void kern()
@@ -389,53 +405,53 @@ namespace Program
             {
                 Bitmap bp = new Bitmap(image);
                 Bitmap bp1 = new Bitmap(image);
-                for (int x = kernel_h / 2; x < (int)w - kernel_h / 2 - 1; x++)
-                {
-                    var color = new Color();
-                    int rSum = 0, gSum = 0, bSum = 0;
-                    for (int y = kernel_w / 2; y < (int)h - kernel_w / 2 - 1; y++)
-                    {
+                Enumerable.Range(kernel_h / 2, (int)w - kernel_h / 2 - 1).AsParallel().ForAll(x =>
+           {
+               var color = new Color();
+               int rSum = 0, gSum = 0, bSum = 0;
+               for (int y = kernel_w / 2; y < (int)h - kernel_w / 2 - 1; y++)
+               {
 
-                        for (int j = 0; j < kernel_h; j++)
-                        {
+                   for (int j = 0; j < kernel_h; j++)
+                   {
 
-                            for (int i = 0; i < kernel_w; i++)
-                            {
-                                color = bp1.GetPixel(x - kernel_h / 2 + i, y - kernel_h / 2 + j);
+                       for (int i = 0; i < kernel_w; i++)
+                       {
+                           color = bp1.GetPixel(x - kernel_h / 2 + i, y - kernel_h / 2 + j);
 
-                                byte r = color.R;
-                                byte g = color.G;
-                                byte b = color.B;
-                                int a = kernel[i, j];
+                           byte r = color.R;
+                           byte g = color.G;
+                           byte b = color.B;
+                           int a = kernel[i, j];
 
-                                rSum += r * a;
-                                gSum += g * a;
-                                bSum += b * a;
-                            }
+                           rSum += r * a;
+                           gSum += g * a;
+                           bSum += b * a;
+                       }
 
-                        }
-                        rSum /= div;
-                        gSum /= div;
-                        bSum /= div;
+                   }
+                   rSum /= div;
+                   gSum /= div;
+                   bSum /= div;
 
-                        rSum += offset;
-                        gSum += offset;
-                        bSum += offset;
+                   rSum += offset;
+                   gSum += offset;
+                   bSum += offset;
 
-                        if (rSum > 255) rSum = 255;
-                        if (rSum < 0) rSum = 0;
+                   if (rSum > 255) rSum = 255;
+                   if (rSum < 0) rSum = 0;
 
-                        if (gSum > 255) gSum = 255;
-                        if (gSum < 0) gSum = 0;
+                   if (gSum > 255) gSum = 255;
+                   if (gSum < 0) gSum = 0;
 
-                        if (bSum > 255) bSum = 255;
-                        if (bSum < 0) bSum = 0;
+                   if (bSum > 255) bSum = 255;
+                   if (bSum < 0) bSum = 0;
 
-                        bp.SetPixel(x, y, Color.FromArgb((byte)rSum, (byte)gSum, (byte)bSum));
-                        rSum = gSum = bSum = 0;
-                    }
+                   bp.SetPixel(x, y, Color.FromArgb((byte)rSum, (byte)gSum, (byte)bSum));
+                   rSum = gSum = bSum = 0;
+               }
 
-                }
+           });
                 
                 image = bp;
                 pictureBox1.Image = bp;
@@ -445,143 +461,10 @@ namespace Program
            
         }
 
-
-        void kerng()
-        {
-            int[] kernel1;
-            kernel1 = new int[11];
-
-            kernel1[0] = 1;
-            kernel1[1] = 2;
-            kernel1[2] = 4;
-            kernel1[3] = 8;
-            kernel1[4] = 16;
-            kernel1[5] = 32;
-            kernel1[6] = 16;
-            kernel1[7] = 8;
-            kernel1[8] = 4;
-            kernel1[9] = 2;
-            kernel1[10] = 1;
-            div = 94;
-            var dst = new ImagerBitmap(image_l);
-            var image_l1 = new ImagerBitmap(image_l);
-            
-
-            Enumerable.Range(7, (int)w - 7).AsParallel().ForAll(x =>
-            {
-                var color = new Color();
-                int rSum = 0, gSum = 0, bSum = 0;
-                for (int y = 7; y < (int)h-7 ; y++)
-                {
-                     for (int i = 0; i < 11; i++)
-                        {
-                            color = image_l1.GetPixel(x - 3 + i, y);
-
-                            byte r = color.R;
-                            byte g = color.G;
-                            byte b = color.B;
-                            int a = kernel1[i];
-
-                            rSum += r * a;
-                            gSum += g * a;
-                            bSum += b * a;
-                        }                  
-                    rSum /= div;
-                    gSum /= div;
-                    bSum /= div;
-
-                    rSum += offset;
-                    gSum += offset;
-                    bSum += offset;
-
-                    if (rSum > 255) rSum = 255;
-                    if (rSum < 0) rSum = 0;
-
-                    if (gSum > 255) gSum = 255;
-                    if (gSum < 0) gSum = 0;
-
-                    if (bSum > 255) bSum = 255;
-                    if (bSum < 0) bSum = 0;
-
-                    dst.SetPixel(x, y, Color.FromArgb((byte)rSum, (byte)gSum, (byte)bSum));
-                    rSum = gSum = bSum = 0;
-                }          
-});
-
-
-            image_l1.UnlockBitmap();
-           dst.UnlockBitmap();
-            image_l1.Bitmap.Dispose();
-            image_l = dst.Bitmap;
-
-            var dsp = dst;
-            var image_l2 = dst;
-
-
-            Enumerable.Range(7, (int)h - 7).AsParallel().ForAll(y =>
-            {
-                var color = new Color();
-                int rSum = 0, gSum = 0, bSum = 0;
-                for (int x = 7; x < (int)w - 7; x++)
-                {
-                    for (int i = 0; i < 11; i++)
-                    {
-                        color = dst.GetPixel(x, y - 3 + i);
-
-                        byte r = color.R;
-                        byte g = color.G;
-                        byte b = color.B;
-                        int a = kernel1[i];
-
-                        rSum += r * a;
-                        gSum += g * a;
-                        bSum += b * a;
-                    }
-                    rSum /= div;
-                    gSum /= div;
-                    bSum /= div;
-
-                    rSum += offset;
-                    gSum += offset;
-                    bSum += offset;
-
-                    if (rSum > 255) rSum = 255;
-                    if (rSum < 0) rSum = 0;
-
-                    if (gSum > 255) gSum = 255;
-                    if (gSum < 0) gSum = 0;
-
-                    if (bSum > 255) bSum = 255;
-                    if (bSum < 0) bSum = 0;
-
-                    dsp.SetPixel(x, y, Color.FromArgb((byte)rSum, (byte)gSum, (byte)bSum));
-                    rSum = gSum = bSum = 0;
-                }
-            });
-
-
-           image_l2.UnlockBitmap();
-            dsp.UnlockBitmap();
-            dst.UnlockBitmap();
-            image_l2.Bitmap.Dispose();
-            image_l = dsp.Bitmap;
-        }
-
-        void inversion()
-        {
-            kernel = new int[1, 1];
-
-            kernel[0, 0] = -1;
-
-            div = 1;
-            offset = 255;
-            kernel_h = kernel_w = 1;
-        }
-
         void hope()
         {
             GC.Collect();
-            dst = new ImagerBitmap(image_l);
+           Bitmap dst = new Bitmap(image);
 
             Enumerable.Range(0, (int)w - 1).AsParallel().WithDegreeOfParallelism(1).ForAll(x =>
                    {
@@ -618,17 +501,16 @@ namespace Program
                        }
                    });
 
-
-            dst.UnlockBitmap();
-            image_l = dst.Bitmap;
+            image = dst;
+            pictureBox1.BackgroundImage = dst;
         }
 
         void nashville()
         {
             GC.Collect();
             win = new Bitmap(Properties.Resources.nashville, (int)w, (int)h);
-            dst = new ImagerBitmap(image_l);
-            dsp = new ImagerBitmap(win);
+           Bitmap dst = new Bitmap(image);
+            Bitmap dsp = new Bitmap(win);
 
             Enumerable.Range(0, (int)w).AsParallel().ForAll(x =>
             {
@@ -654,18 +536,17 @@ namespace Program
 
                 }
             });
-
-            dst.UnlockBitmap();
-            dsp.UnlockBitmap();
-            image_l = dst.Bitmap;
+            image = dst;
+            pictureBox1.BackgroundImage = dst;
+            
         }
 
         void willow()
         {
             GC.Collect();
             win = new Bitmap(Properties.Resources.willow1, (int)w, (int)h);
-            dst = new ImagerBitmap(image_l);
-            dsp = new ImagerBitmap(win);
+           Bitmap dst = new Bitmap(image);
+            Bitmap dsp = new Bitmap(win);
 
             Enumerable.Range(0, (int)w).AsParallel().ForAll(x =>
             {
@@ -692,19 +573,17 @@ namespace Program
 
                 }
             });
-
-            dst.UnlockBitmap();
-           dsp.UnlockBitmap();
-            image_l = dst.Bitmap;
-            win.Dispose();
+            image = dst;
+            pictureBox1.BackgroundImage = dst;
+           
         }
 
         void heat()
         {
             GC.Collect();
             win = new Bitmap(Properties.Resources.vignette, (int)w, (int)h);
-            dst = new ImagerBitmap(image_l);
-            dsp = new ImagerBitmap(win);
+            Bitmap dst = new Bitmap(image);
+            Bitmap dsp = new Bitmap(win);
 
             Enumerable.Range(0, (int)w).AsParallel().ForAll(x =>
             {
@@ -738,17 +617,17 @@ namespace Program
                 }
             });
 
-            dst.UnlockBitmap();
 
-            image_l = dst.Bitmap;
+            image = dst;
+            pictureBox1.BackgroundImage = dst;
         }
 
         void bp()
         {
             GC.Collect();
             win = new Bitmap(Properties.Resources.pb, (int)w, (int)h);
-            dst = new ImagerBitmap(image_l);
-            dsp = new ImagerBitmap(win);
+            Bitmap dst = new Bitmap(image);
+           Bitmap dsp = new Bitmap(win);
 
             Enumerable.Range(0, (int)w).AsParallel().ForAll(x =>
             {
@@ -779,10 +658,9 @@ namespace Program
                 }
             });
 
-            dst.UnlockBitmap();
-            dsp.UnlockBitmap();
-            image_l = dst.Bitmap;
-            win.Dispose();
+            image = dst;
+            pictureBox1.BackgroundImage = dst;
+          
         }
 
         void collage()
@@ -792,246 +670,206 @@ namespace Program
 
             win = new Bitmap(Properties.Resources.collage, (int)(w + w / 10), (int)(h + h / 10));
 
-            dsp = new ImagerBitmap(image_l);
+           Bitmap dsp = new Bitmap(image);
 
-            dst = new ImagerBitmap(win);
-
-
-            Enumerable.Range(0, (int)(w / 2)).AsParallel().ForAll(x =>
-            {
-                var color = new Color();
+           Bitmap dst = new Bitmap(win);
 
 
-                for (int y = 0; y < (int)(h / 2); y++)
-                {
-                    color = dsp.GetPixel(x, y);
+           Enumerable.Range(0, (int)(w / 2)).AsParallel().ForAll(x =>
+           {
+               var color = new Color();
 
 
-                    float brght = color.GetBrightness();
+               for (int y = 0; y < (int)(h / 2); y++)
+               {
+                   color = dsp.GetPixel(x, y);
 
 
-                    byte r = color.R;
-                    byte g = color.G;
-                    byte b = color.B;
-
-                    if (brght < 0.15)
-                    {
-                        b = 100;
-                    }
-
-                    if (brght >= 0.15 & brght < 0.3)
-                    {
-                        r = 50;
-                        b = 50;
-                    }
-
-                    if (brght >= 0.3 & brght < 0.85)
-                    {
-                        r = 255;
-                        g = 0;
-                        b = 50;
-                    }
-
-                    if (brght >= 0.85)
-                    {
-                        g = 200;
-                        b = 100;
-                    }
-                    dst.SetPixel((int)(x + w / 30), (int)(y + h / 30), Color.FromArgb(r, g, b));
-
-                    /////////////////////////////////////////////
-                    r = color.R;
-                    g = color.G;
-                    b = color.B;
-
-                    if (brght < 0.15)
-                    {
-                        r = 20;
-                        g = 20;
-                    }
-
-                    if (brght >= 0.15 & brght < 0.3)
-                    {
-                        g = 150;
-                        b = 150;
-                    }
-
-                    if (brght >= 0.3 & brght < 0.85)
-                    {
-                        r = 55;
-                        b = 255;
-                    }
-
-                    if (brght >= 0.85)
-                    {
-                        r = 190;
-                        g -= 50;
-                        b = 255;
-                    }
-                    dst.SetPixel((int)(x + 17 * w / 30), (int)(y + h / 30), Color.FromArgb(r, g, b));
-
-                    /////////////////////////////////////////////
-                    r = color.R;
-                    g = color.G;
-                    b = color.B;
-
-                    if (brght < 0.15)
-                    {
-                        b = 75;
-                        r = 75;
-                    }
-
-                    if (brght >= 0.15 & brght < 0.3)
-                    {
-                        r = 50;
-                        b = 150;
-                    }
-
-                    if (brght >= 0.3 & brght < 0.85)
-                    {
-                        r = 255;
-                        g = 175;
-                        // b = 250;
-                    }
-
-                    if (brght >= 0.85)
-                    {
-                        g = 200;
-                        b = 100;
-                    }
-                    dst.SetPixel((int)(x + 17 * w / 30), (int)(y + 17 * h / 30), Color.FromArgb(r, g, b));
-
-                    /////////////////////////////////////////////
-                    r = color.R;
-                    g = color.G;
-                    b = color.B;
-
-                    if (brght < 0.15)
-                    {
-                        b = 100;
-                        g = 100;
-                    }
-
-                    if (brght >= 0.15 & brght < 0.3)
-                    {
-                        r = 50;
-                        b = 50;
-                    }
-
-                    if (brght >= 0.3 & brght < 0.85)
-                    {
-                        r -= 10;
-                        g = 250;
-                        b += 25;
-                    }
-
-                    if (brght >= 0.85)
-                    {
-                        g = 210;
-                        b = 150;
-                        r = 15;
-                    }
-                    dst.SetPixel((int)(x + w / 30), (int)(y + 17 * h / 30), Color.FromArgb(r, g, b));
-
-                }
-            });
+                   float brght = color.GetBrightness();
 
 
+                   byte r = color.R;
+                   byte g = color.G;
+                   byte b = color.B;
 
-           dst.UnlockBitmap();
-            dsp.UnlockBitmap();
+                   if (brght < 0.15)
+                   {
+                       b = 100;
+                   }
 
-            image_l = dst.Bitmap;
+                   if (brght >= 0.15 & brght < 0.3)
+                   {
+                       r = 50;
+                       b = 50;
+                   }
+
+                   if (brght >= 0.3 & brght < 0.85)
+                   {
+                       r = 255;
+                       g = 0;
+                       b = 50;
+                   }
+
+                   if (brght >= 0.85)
+                   {
+                       g = 200;
+                       b = 100;
+                   }
+                   dst.SetPixel((int)(x + w / 30), (int)(y + h / 30), Color.FromArgb(r, g, b));
+
+                   /////////////////////////////////////////////
+                   r = color.R;
+                   g = color.G;
+                   b = color.B;
+
+                   if (brght < 0.15)
+                   {
+                       r = 20;
+                       g = 20;
+                   }
+
+                   if (brght >= 0.15 & brght < 0.3)
+                   {
+                       g = 150;
+                       b = 150;
+                   }
+
+                   if (brght >= 0.3 & brght < 0.85)
+                   {
+                       r = 55;
+                       b = 255;
+                   }
+
+                   if (brght >= 0.85)
+                   {
+                       r = 190;
+                       g -= 50;
+                       b = 255;
+                   }
+                   dst.SetPixel((int)(x + 17 * w / 30), (int)(y + h / 30), Color.FromArgb(r, g, b));
+
+                   /////////////////////////////////////////////
+                   r = color.R;
+                   g = color.G;
+                   b = color.B;
+
+                   if (brght < 0.15)
+                   {
+                       b = 75;
+                       r = 75;
+                   }
+
+                   if (brght >= 0.15 & brght < 0.3)
+                   {
+                       r = 50;
+                       b = 150;
+                   }
+
+                   if (brght >= 0.3 & brght < 0.85)
+                   {
+                       r = 255;
+                       g = 175;
+                       // b = 250;
+                   }
+
+                   if (brght >= 0.85)
+                   {
+                       g = 200;
+                       b = 100;
+                   }
+                   dst.SetPixel((int)(x + 17 * w / 30), (int)(y + 17 * h / 30), Color.FromArgb(r, g, b));
+
+                   /////////////////////////////////////////////
+                   r = color.R;
+                   g = color.G;
+                   b = color.B;
+
+                   if (brght < 0.15)
+                   {
+                       b = 100;
+                       g = 100;
+                   }
+
+                   if (brght >= 0.15 & brght < 0.3)
+                   {
+                       r = 50;
+                       b = 50;
+                   }
+
+                   if (brght >= 0.3 & brght < 0.85)
+                   {
+                       r -= 10;
+                       g = 250;
+                       b += 25;
+                   }
+
+                   if (brght >= 0.85)
+                   {
+                       g = 210;
+                       b = 150;
+                       r = 15;
+                   }
+                   dst.SetPixel((int)(x + w / 30), (int)(y + 17 * h / 30), Color.FromArgb(r, g, b));
+
+               }
+           });
+           image = dst;
+            pictureBox1.BackgroundImage = dst;
 
         }
 
 
-  
-
-       
-
-        private void blur_Click(object sender, EventArgs e)
-        {
-          
-
-            image_l = new Bitmap(origin_size_image, (int)w, (int)h);
-            //  blur();
-            kerng();
-
-            this.BackgroundImage = image_l;
-            a = 3;
-        }
-
-        private void cld_Click(object sender, EventArgs e)
-        {
-            
-            image_l = new Bitmap(origin_size_image, (int)w, (int)h);
-            cold();
-            this.BackgroundImage = image_l;
-            a = 4;
-        }
-
-        private void hp_Click(object sender, EventArgs e)
-        {
-            
-            image_l = new Bitmap(origin_size_image, (int)w, (int)h);
-            hope();
-            a = 5;
-            this.BackgroundImage = image_l;
-        }
-
-        private void nshv_Click(object sender, EventArgs e)
-        {
-            
-            image_l = new Bitmap(origin_size_image, (int)w, (int)h);
-            nashville();
-            a = 6;
-            this.BackgroundImage = image_l;
-        }
-
-        private void wlw_Click(object sender, EventArgs e)
-        {
-            
-            image_l = new Bitmap(origin_size_image, (int)w, (int)h);
-            willow();
-            a = 7;
-            this.BackgroundImage = image_l;
-        }
-
-        private void pb_Click(object sender, EventArgs e)
-        {
-            
-            image_l = new Bitmap(origin_size_image, (int)w, (int)h);
-            bp();
-            a = 8;
-            this.BackgroundImage = image_l;
-        }
-
-        private void ht_Click(object sender, EventArgs e)
-        {
-           
-            image_l = new Bitmap(origin_size_image, (int)w, (int)h);
-            heat();
-            a = 9;
-            this.BackgroundImage = image_l;
-        }
-
-        private void clg_Click(object sender, EventArgs e)
-        {
-           
-            image_l = new Bitmap(origin_size_image, (int)(w / 2), (int)(h / 2));
-            collage();
-            a = 10;
-            this.BackgroundImage = image_l;
-        }
 
         private void резкостьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            image_l = new Bitmap(image, (int)w, (int)h);
+            
             sharpen();
             kern();
-            pictureBox1.BackgroundImage = image_l;
+            
         }
+
+        private void чБ2ToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            
+            willow();
+          
+        }
+
+        private void рамка1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+            cold();
+           
+        }
+
+        private void эффектКрасныйToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            hope();
+        }
+
+        private void старинаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+            nashville();
+            
+        }
+
+        private void эффектКраскиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bp();
+        }
+
+        private void эффект2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            heat();
+        }
+
+        private void коллажToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            collage();
+        }
+
+     
     
      }
 

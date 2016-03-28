@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,7 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BrightnessContrast.cs" />
-    <Compile Include="ImagerBitmap.cs" />
     <Compile Include="ColorBalance.cs" />
     <Compile Include="Form3.cs">
       <SubType>Form</SubType>
