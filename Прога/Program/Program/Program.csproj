@@ -102,7 +102,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resourse\" />
+    <Content Include="Resources\begin.gif" />
+    <Content Include="Resources\begin.png" />
+    <Content Include="Resources\collage.jpg" />
+    <Content Include="Resources\fon.png" />
+    <Content Include="Resources\nashville.jpg" />
+    <Content Include="Resources\pb.jpg" />
+    <Content Include="Resources\ramka.jpg" />
+    <Content Include="Resources\vignette.jpg" />
+    <Content Include="Resources\vignette.png" />
+    <Content Include="Resources\willow.png" />
+    <Content Include="Resources\willow1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

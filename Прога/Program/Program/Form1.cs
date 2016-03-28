@@ -66,22 +66,11 @@ namespace Program
                 origin_size_image.Dispose();
             }
 
-            origin_size_image = (Bitmap)Image.FromFile(open_dialog.FileName);
-            w = origin_size_image.Width;
-            h = origin_size_image.Height;
+        
+            w = image.Width;
+            h = image.Height;
 
-            if (origin_size_image.Width >= 150 && origin_size_image.Width >= origin_size_image.Height)
-            {
-                float k = (float)origin_size_image.Width / 150;
-                w = 150;
-                h = origin_size_image.Height / k;
-            }
-            else if (origin_size_image.Height >= 120 && origin_size_image.Width < origin_size_image.Height)
-            {
-                float k = (float)origin_size_image.Height / 120;
-                h = 120;
-                w = origin_size_image.Width / k;
-            }
+          
         }
 
         //сохранение изображения
@@ -357,7 +346,7 @@ namespace Program
 
             GC.Collect();
             win = new Bitmap(Properties.Resources.ramka, (int)w, (int)h);
-            dst = new ImagerBitmap(image_l);
+            dst = new ImagerBitmap(image);
             dsp = new ImagerBitmap(win);
 
             Enumerable.Range(0, (int)w).AsParallel().ForAll(x =>
@@ -396,63 +385,64 @@ namespace Program
         void kern()
         {
 
-
-            var dst = new ImagerBitmap(image_l);
-            var image_l1 = new ImagerBitmap(image_l);
-
-
-            Enumerable.Range(kernel_h / 2, (int)w - kernel_h / 2 - 1).AsParallel().ForAll(x =>
+            if (image != null)
             {
-                var color = new Color();
-                int rSum = 0, gSum = 0, bSum = 0;
-                for (int y = kernel_w / 2; y < (int)h - kernel_w / 2 - 1; y++)
+                Bitmap bp = new Bitmap(image);
+                Bitmap bp1 = new Bitmap(image);
+                for (int x = kernel_h / 2; x < (int)w - kernel_h / 2 - 1; x++)
                 {
-
-                    for (int j = 0; j < kernel_h; j++)
+                    var color = new Color();
+                    int rSum = 0, gSum = 0, bSum = 0;
+                    for (int y = kernel_w / 2; y < (int)h - kernel_w / 2 - 1; y++)
                     {
 
-                        for (int i = 0; i < kernel_w; i++)
+                        for (int j = 0; j < kernel_h; j++)
                         {
-                            color = image_l1.GetPixel(x - kernel_h / 2 + i, y - kernel_h / 2 + j);
 
-                            byte r = color.R;
-                            byte g = color.G;
-                            byte b = color.B;
-                            int a = kernel[i, j];
+                            for (int i = 0; i < kernel_w; i++)
+                            {
+                                color = bp1.GetPixel(x - kernel_h / 2 + i, y - kernel_h / 2 + j);
 
-                            rSum += r * a;
-                            gSum += g * a;
-                            bSum += b * a;
+                                byte r = color.R;
+                                byte g = color.G;
+                                byte b = color.B;
+                                int a = kernel[i, j];
+
+                                rSum += r * a;
+                                gSum += g * a;
+                                bSum += b * a;
+                            }
+
                         }
+                        rSum /= div;
+                        gSum /= div;
+                        bSum /= div;
 
+                        rSum += offset;
+                        gSum += offset;
+                        bSum += offset;
+
+                        if (rSum > 255) rSum = 255;
+                        if (rSum < 0) rSum = 0;
+
+                        if (gSum > 255) gSum = 255;
+                        if (gSum < 0) gSum = 0;
+
+                        if (bSum > 255) bSum = 255;
+                        if (bSum < 0) bSum = 0;
+
+                        bp.SetPixel(x, y, Color.FromArgb((byte)rSum, (byte)gSum, (byte)bSum));
+                        rSum = gSum = bSum = 0;
                     }
-                    rSum /= div;
-                    gSum /= div;
-                    bSum /= div;
 
-                    rSum += offset;
-                    gSum += offset;
-                    bSum += offset;
-
-                    if (rSum > 255) rSum = 255;
-                    if (rSum < 0) rSum = 0;
-
-                    if (gSum > 255) gSum = 255;
-                    if (gSum < 0) gSum = 0;
-
-                    if (bSum > 255) bSum = 255;
-                    if (bSum < 0) bSum = 0;
-
-                    dst.SetPixel(x, y, Color.FromArgb((byte)rSum, (byte)gSum, (byte)bSum));
-                    rSum = gSum = bSum = 0;
                 }
+                
+                image = bp;
+                pictureBox1.Image = bp;
+            }
 
-            });
-            image_l1.UnlockBitmap();
 
-            dst.UnlockBitmap();
-            image_l1.Bitmap.Dispose();
-            image_l = dst.Bitmap;
+           
         }
 
 
@@ -743,7 +733,7 @@ namespace Program
                     r = (byte)((r * 0.75 + ((1 - brght) * r + (brght) * 255) * 0.25));
                     b = (byte)((b * 0.6 + ((1 - brght) * b + (brght) * 25) * 0.4));
 
-                   // dst.SetPixel(x, y, Color.FromArgb((byte)( r1 ), (byte)( g1 ), (byte)( b1 )));
+                   dst.SetPixel(x, y, Color.FromArgb((byte)( r1 ), (byte)( g1 ), (byte)( b1 )));
                     dst.SetPixel(x, y, Color.FromArgb((byte)(r * brght1 + r1 * (1 - brght1)), (byte)(g * brght1 + g1 * (1 - brght1)), (byte)(b * brght1 + b1 * (1-brght1))));
                 }
             });
@@ -789,8 +779,8 @@ namespace Program
                 }
             });
 
-            //dst.UnlockBitmap();
-           // dsp.UnlockBitmap();
+            dst.UnlockBitmap();
+            dsp.UnlockBitmap();
             image_l = dst.Bitmap;
             win.Dispose();
         }
@@ -1037,7 +1027,7 @@ namespace Program
 
         private void резкостьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            image_l = new Bitmap(origin_size_image, (int)w, (int)h);
+            image_l = new Bitmap(image, (int)w, (int)h);
             sharpen();
             kern();
             pictureBox1.BackgroundImage = image_l;
