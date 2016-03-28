@@ -54,16 +54,16 @@ namespace Program
                     w = image.Width;
                     h = image.Height;
 
-                    if (image.Width >= 150 && image.Width >= image.Height)
+                    if (image.Width >= 800 && image.Width >= image.Height)
                     {
-                        float k = (float)image.Width / 150;
-                        w = 150;
+                        float k = (float)image.Width / 800;
+                        w = 800;
                         h = image.Height / k;
                     }
-                    else if (image.Height >= 120 && image.Width < image.Height)
+                    else if (image.Height >= 600 && image.Width < image.Height)
                     {
-                        float k = (float)image.Height / 120;
-                        h = 120;
+                        float k = (float)image.Height / 600;
+                        h = 600;
                         w = image.Width / k;
 
                     }
@@ -84,11 +84,7 @@ namespace Program
                     "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-          
-
-        
-            w = image.Width;
-            h = image.Height;
+         
 
           
         }
@@ -361,19 +357,19 @@ namespace Program
         void cold()
         {
 
-            GC.Collect();
             win = new Bitmap(Properties.Resources.ramka, (int)w, (int)h);
-           // Bitmap bp = new Bitmap(image);
+
             Bitmap dst = new Bitmap(image);
+            Bitmap dst1 = new Bitmap(image);
             Bitmap dsp = new Bitmap(win);
 
-            Enumerable.Range(0, (int)w).AsParallel().ForAll(x =>
+            for(int x=0; x<(int)w; x++)
             {
                 var color = new Color();
                 var color1 = new Color();
                 for (int y = 0; y < (int)h; y++)
                 {
-                    color = dst.GetPixel(x, y);
+                    color = dst1.GetPixel(x, y);
                     color1 = dsp.GetPixel(x, y);
 
                     float brght = color.GetBrightness();
@@ -393,7 +389,7 @@ namespace Program
 
                     dst.SetPixel(x, y, Color.FromArgb((byte)(r * (1 - brght1) + r1 * brght1), (byte)(g * (1 - brght1) + g1 * brght1), (byte)(b * (1 - brght1) + b1 * brght1)));
                 }
-            });
+            }
             image = dst;
             pictureBox1.Image = dst;
         }
@@ -405,7 +401,7 @@ namespace Program
             {
                 Bitmap bp = new Bitmap(image);
                 Bitmap bp1 = new Bitmap(image);
-                Enumerable.Range(kernel_h / 2, (int)w - kernel_h / 2 - 1).AsParallel().ForAll(x =>
+                for(int x=kernel_h / 2;x< (int)w - kernel_h / 2 - 1;x++)
            {
                var color = new Color();
                int rSum = 0, gSum = 0, bSum = 0;
@@ -451,7 +447,7 @@ namespace Program
                    rSum = gSum = bSum = 0;
                }
 
-           });
+           }
                 
                 image = bp;
                 pictureBox1.Image = bp;
@@ -463,15 +459,15 @@ namespace Program
 
         void hope()
         {
-            GC.Collect();
            Bitmap dst = new Bitmap(image);
+           Bitmap dst1 = new Bitmap(image);
 
-            Enumerable.Range(0, (int)w - 1).AsParallel().WithDegreeOfParallelism(1).ForAll(x =>
+            for(int x=0;x< (int)(w - 1);x++)
                    {
                        var color = new Color();
                        for (int y = 0; y < (int)h - 1; y++)
                        {
-                           color = dst.GetPixel(x, y);
+                           color = dst1.GetPixel(x, y);
 
                            float brght = color.GetBrightness();
                            byte r = color.R;
@@ -499,26 +495,26 @@ namespace Program
 
                            dst.SetPixel(x, y, Color.FromArgb(r, g, b));
                        }
-                   });
+                   }
 
             image = dst;
-            pictureBox1.BackgroundImage = dst;
+            pictureBox1.Image = dst;
         }
 
         void nashville()
         {
-            GC.Collect();
             win = new Bitmap(Properties.Resources.nashville, (int)w, (int)h);
            Bitmap dst = new Bitmap(image);
+           Bitmap dst1 = new Bitmap(image);
             Bitmap dsp = new Bitmap(win);
 
-            Enumerable.Range(0, (int)w).AsParallel().ForAll(x =>
+            for(int x=0;x<(int)w;x++)
             {
                 var color = new Color();
                 var color1 = new Color();
                 for (int y = 0; y < (int)h; y++)
                 {
-                    color = dst.GetPixel(x, y);
+                    color = dst1.GetPixel(x, y);
                     color1 = dsp.GetPixel(x, y);
                     float brght = color.GetBrightness();
 
@@ -535,63 +531,66 @@ namespace Program
                     dst.SetPixel(x, y, Color.FromArgb((byte)(r * 0.55 + r1 * 0.45), (byte)(g * 0.95 + g1 * 0.05), (byte)(b * 0.6 + b1 * 0.4)));
 
                 }
-            });
+            }
             image = dst;
-            pictureBox1.BackgroundImage = dst;
+            pictureBox1.Image = dst;
             
         }
 
         void willow()
         {
-            GC.Collect();
-            win = new Bitmap(Properties.Resources.willow1, (int)w, (int)h);
-           Bitmap dst = new Bitmap(image);
-            Bitmap dsp = new Bitmap(win);
-
-            Enumerable.Range(0, (int)w).AsParallel().ForAll(x =>
+            if (image != null)
             {
-                var color = new Color();
-                var color1 = new Color();
-                for (int y = 0; y < (int)h; y++)
+                win = new Bitmap(Properties.Resources.willow1, (int)w, (int)h);
+                Bitmap dst = new Bitmap(image);
+                Bitmap dst1 = new Bitmap(image);
+                Bitmap dsp = new Bitmap(win);
+
+                for (int x = 0; x < (int)w; x++)
                 {
-                    color = dst.GetPixel(x, y);
-                    color1 = dsp.GetPixel(x, y);
-                    float brght = color.GetBrightness();
+                    var color = new Color();
+                    var color1 = new Color();
+                    for (int y = 0; y < (int)h; y++)
+                    {
+                        color = dst1.GetPixel(x, y);
+                        color1 = dsp.GetPixel(x, y);
+                        float brght = color.GetBrightness();
 
-                    byte r = color.R;
-                    byte g = color.G;
-                    byte b = color.B;
+                        byte r = color.R;
+                        byte g = color.G;
+                        byte b = color.B;
 
-                    float brght1 = color1.GetBrightness();
-                    byte r1 = color1.R;
-                    byte g1 = color1.G;
-                    byte b1 = color1.B;
+                        float brght1 = color1.GetBrightness();
+                        byte r1 = color1.R;
+                        byte g1 = color1.G;
+                        byte b1 = color1.B;
 
-                    g = b = r;
+                        g = b = r;
 
-                    dst.SetPixel(x, y, Color.FromArgb((byte)(r * (1 - brght1) + r1 * brght1), (byte)(g * (1 - brght1) + g1 * brght1), (byte)(b * (1 - brght1) + b1 * brght1)));
+                        dst.SetPixel(x, y, Color.FromArgb((byte)(r * (1 - brght1) + r1 * brght1), (byte)(g * (1 - brght1) + g1 * brght1), (byte)(b * (1 - brght1) + b1 * brght1)));
 
+                    }
                 }
-            });
-            image = dst;
-            pictureBox1.BackgroundImage = dst;
-           
+                image = dst;
+                pictureBox1.Image = image;
+            }
         }
 
         void heat()
         {
-            GC.Collect();
+            
             win = new Bitmap(Properties.Resources.vignette, (int)w, (int)h);
             Bitmap dst = new Bitmap(image);
+            Bitmap dst1 = new Bitmap(image);
             Bitmap dsp = new Bitmap(win);
 
-            Enumerable.Range(0, (int)w).AsParallel().ForAll(x =>
+           for(int x=0;x<(int)w;x++)
             {
                 var color = new Color();
                 var color1 = new Color();
                 for (int y = 0; y < (int)h; y++)
                 {
-                    color = dst.GetPixel(x, y);
+                    color = dst1.GetPixel(x, y);
                     color1 = dsp.GetPixel(x, y);
 
                     float brght = color.GetBrightness();
@@ -605,21 +604,21 @@ namespace Program
                     byte g1 = color1.G;
                     byte b1 = color1.B;
 
-                    g = (byte)((g * 0.65 + ((brght) * g + (1 - brght) * 120) * 0.35));
+                 //   g = (byte)((g * 0.65 + ((brght) * g + (1 - brght) * 120) * 0.35));
 
 
                     g = (byte)((g * 0.75 + ((1-brght) * g + (brght) *120) * 0.25));
                     r = (byte)((r * 0.75 + ((1 - brght) * r + (brght) * 255) * 0.25));
                     b = (byte)((b * 0.6 + ((1 - brght) * b + (brght) * 25) * 0.4));
 
-                   dst.SetPixel(x, y, Color.FromArgb((byte)( r1 ), (byte)( g1 ), (byte)( b1 )));
+                  // dst.SetPixel(x, y, Color.FromArgb((byte)( r1 ), (byte)( g1 ), (byte)( b1 )));
                     dst.SetPixel(x, y, Color.FromArgb((byte)(r * brght1 + r1 * (1 - brght1)), (byte)(g * brght1 + g1 * (1 - brght1)), (byte)(b * brght1 + b1 * (1-brght1))));
                 }
-            });
+            }
 
 
             image = dst;
-            pictureBox1.BackgroundImage = dst;
+            pictureBox1.Image = dst;
         }
 
         void bp()
@@ -629,7 +628,7 @@ namespace Program
             Bitmap dst = new Bitmap(image);
            Bitmap dsp = new Bitmap(win);
 
-            Enumerable.Range(0, (int)w).AsParallel().ForAll(x =>
+for(int x=0;x<(int)w;x++)
             {
                 var color = new Color();
                 var color1 = new Color();
@@ -656,10 +655,10 @@ namespace Program
                     dst.SetPixel(x, y, Color.FromArgb((byte)(r * 0.3 + r1 * 0.7), (byte)(g * 0.9 + g1 * 0.1), (byte)(b * 0.9 + b1 * 0.1)));
 
                 }
-            });
+            }
 
             image = dst;
-            pictureBox1.BackgroundImage = dst;
+            pictureBox1.Image = dst;
           
         }
 
@@ -675,7 +674,7 @@ namespace Program
            Bitmap dst = new Bitmap(win);
 
 
-           Enumerable.Range(0, (int)(w / 2)).AsParallel().ForAll(x =>
+           for(int x=0; x<(int)(w / 2);x++)
            {
                var color = new Color();
 
@@ -812,9 +811,9 @@ namespace Program
                    dst.SetPixel((int)(x + w / 30), (int)(y + 17 * h / 30), Color.FromArgb(r, g, b));
 
                }
-           });
+           }
            image = dst;
-            pictureBox1.BackgroundImage = dst;
+            pictureBox1.Image = dst;
 
         }
 
@@ -867,6 +866,11 @@ namespace Program
         private void коллажToolStripMenuItem_Click(object sender, EventArgs e)
         {
             collage();
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+
         }
 
      

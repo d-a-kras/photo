@@ -45,11 +45,12 @@
             this.чБ2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.рамка1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.эффектКрасныйToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.старинаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.эффектКраскиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.эффект2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.коллажToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -196,13 +197,6 @@
             this.эффектКрасныйToolStripMenuItem.Text = "эффект красный";
             this.эффектКрасныйToolStripMenuItem.Click += new System.EventHandler(this.эффектКрасныйToolStripMenuItem_Click);
             // 
-            // выходToolStripMenuItem
-            // 
-            this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
-            this.выходToolStripMenuItem.Text = "Выход";
-            this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
-            // 
             // старинаToolStripMenuItem
             // 
             this.старинаToolStripMenuItem.Name = "старинаToolStripMenuItem";
@@ -231,11 +225,27 @@
             this.коллажToolStripMenuItem.Text = "коллаж";
             this.коллажToolStripMenuItem.Click += new System.EventHandler(this.коллажToolStripMenuItem_Click);
             // 
+            // выходToolStripMenuItem
+            // 
+            this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.выходToolStripMenuItem.Text = "Выход";
+            this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(248, 0);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(100, 23);
+            this.progressBar1.TabIndex = 2;
+            this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(346, 290);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -273,6 +283,7 @@
         private System.Windows.Forms.ToolStripMenuItem эффектКраскиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem эффект2ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem коллажToolStripMenuItem;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
 
