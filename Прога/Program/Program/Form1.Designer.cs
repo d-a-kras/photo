@@ -36,7 +36,6 @@
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.яркостьконтрастностьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.цветовойБалансToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.повыситьРезкостьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.размытьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.чБToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.зеркалоToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,13 +50,16 @@
             this.коллажToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.слабоеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.среднееToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.сильноеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 27);
+            this.pictureBox1.Location = new System.Drawing.Point(8, 27);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(151, 112);
             this.pictureBox1.TabIndex = 1;
@@ -103,7 +105,6 @@
             this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.яркостьконтрастностьToolStripMenuItem,
             this.цветовойБалансToolStripMenuItem,
-            this.повыситьРезкостьToolStripMenuItem,
             this.размытьToolStripMenuItem,
             this.чБToolStripMenuItem,
             this.зеркалоToolStripMenuItem,
@@ -134,15 +135,12 @@
             this.цветовойБалансToolStripMenuItem.Text = "Цветовой баланс";
             this.цветовойБалансToolStripMenuItem.Click += new System.EventHandler(this.цветовойБалансToolStripMenuItem_Click);
             // 
-            // повыситьРезкостьToolStripMenuItem
-            // 
-            this.повыситьРезкостьToolStripMenuItem.Name = "повыситьРезкостьToolStripMenuItem";
-            this.повыситьРезкостьToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.повыситьРезкостьToolStripMenuItem.Text = "Повысить резкость";
-            this.повыситьРезкостьToolStripMenuItem.Click += new System.EventHandler(this.повыситьРезкостьToolStripMenuItem_Click);
-            // 
             // размытьToolStripMenuItem
             // 
+            this.размытьToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.слабоеToolStripMenuItem,
+            this.среднееToolStripMenuItem,
+            this.сильноеToolStripMenuItem});
             this.размытьToolStripMenuItem.Name = "размытьToolStripMenuItem";
             this.размытьToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
             this.размытьToolStripMenuItem.Text = "Размыть";
@@ -240,6 +238,27 @@
             this.progressBar1.TabIndex = 2;
             this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
             // 
+            // слабоеToolStripMenuItem
+            // 
+            this.слабоеToolStripMenuItem.Name = "слабоеToolStripMenuItem";
+            this.слабоеToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.слабоеToolStripMenuItem.Text = "Слабо";
+            this.слабоеToolStripMenuItem.Click += new System.EventHandler(this.слабоеToolStripMenuItem_Click);
+            // 
+            // среднееToolStripMenuItem
+            // 
+            this.среднееToolStripMenuItem.Name = "среднееToolStripMenuItem";
+            this.среднееToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.среднееToolStripMenuItem.Text = "Средне";
+            this.среднееToolStripMenuItem.Click += new System.EventHandler(this.среднееToolStripMenuItem_Click);
+            // 
+            // сильноеToolStripMenuItem
+            // 
+            this.сильноеToolStripMenuItem.Name = "сильноеToolStripMenuItem";
+            this.сильноеToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.сильноеToolStripMenuItem.Text = "Сильно";
+            this.сильноеToolStripMenuItem.Click += new System.EventHandler(this.сильноеToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -251,6 +270,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -269,7 +289,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem яркостьконтрастностьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem цветовойБалансToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem повыситьРезкостьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem размытьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem чБToolStripMenuItem;
@@ -284,6 +303,9 @@
         private System.Windows.Forms.ToolStripMenuItem эффект2ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem коллажToolStripMenuItem;
         private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.ToolStripMenuItem слабоеToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem среднееToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem сильноеToolStripMenuItem;
     }
 }
 

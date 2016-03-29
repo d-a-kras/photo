@@ -16,23 +16,27 @@ namespace Program
     {
         public Form1()
         {
+            
             InitializeComponent();
+            progressBar1.Visible = false;
             
         }
 
         public static Bitmap image;
         public static string full_name_of_image = "\0";
         public static UInt32[,] pixel;
-        public byte div, offset;
+        public int div, offset;
         public int kernel_w, kernel_h;
         public int[,] kernel;
         public Bitmap  nashville1, win;
         public float w, h;
+
       
 
         //открытие изображения
         private void открытьToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            progressBar1.Visible = true;
             OpenFileDialog open_dialog = new OpenFileDialog();
             open_dialog.Filter = "Image Files(*.BMP;*.JPG;*.GIF;*.PNG)|*.BMP;*.JPG;*.GIF;*.PNG|All files (*.*)|*.*";
             if (open_dialog.ShowDialog() == DialogResult.OK)
@@ -47,9 +51,15 @@ namespace Program
                     pictureBox1.Invalidate(); //????
                     //получение матрицы с пикселями
                     pixel = new UInt32[image.Height, image.Width];
+                    progressBar1.Maximum = image.Height;
+                    progressBar1.Step = 1;
+                    progressBar1.Value = 0;
                     for (int y = 0; y < image.Height; y++)
+                    {
+                        progressBar1.PerformStep();
                         for (int x = 0; x < image.Width; x++)
                             pixel[y, x] = (UInt32)(image.GetPixel(x, y).ToArgb());
+                    }
                     
                     w = image.Width;
                     h = image.Height;
@@ -84,9 +94,11 @@ namespace Program
                     "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-         
 
-          
+
+
+            progressBar1.Visible = false;
+            progressBar1.Value = 0;
         }
 
         //сохранение изображения
@@ -124,7 +136,6 @@ namespace Program
                 Form2 BrightnessForm = new Form2(this);
                 BrightnessForm.ShowDialog(); //just 'Show' for the control Form1
             }
-
             else MessageBox.Show("Выбирите файл");
         }
 
@@ -156,14 +167,7 @@ namespace Program
         //размыть
         private void размытьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (full_name_of_image != "\0")
-            {
-                pixel = Filter.matrix_filtration(image.Width, image.Height, pixel, Filter.N2, Filter.blur);
-                FromPixelToBitmap();
-                FromBitmapToScreen();
-            }
 
-            else MessageBox.Show("Выбирите файл");
         }
 
         //преобразование из UINT32 to Bitmap
@@ -206,8 +210,13 @@ namespace Program
                 int widthBytes = bmpData.Stride;
                 byte[] rgbValues = new byte[numBytes];
                 Marshal.Copy(ptr, rgbValues, 0, numBytes);
+                progressBar1.Visible = true;
+                progressBar1.Value = 0;
+                progressBar1.Step = 1;
+                progressBar1.Maximum = rgbValues.Length/3;
                 for (int counter = 0; counter < rgbValues.Length; counter += 3)
                 {
+                    progressBar1.PerformStep();
                     int value = rgbValues[counter] + rgbValues[counter + 1] + rgbValues[counter + 2];
                     byte color_b = 0;
                     color_b = Convert.ToByte(value / 3);
@@ -218,6 +227,7 @@ namespace Program
                 Marshal.Copy(rgbValues, 0, ptr, numBytes);
                 bmpData2.UnlockBits(bmpData);
                 pictureBox1.Image = bmpData2;
+                progressBar1.Visible = false;
             }
 
             else MessageBox.Show("Выбирите файл");
@@ -225,11 +235,17 @@ namespace Program
 
         private void зеркалоToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            progressBar1.Visible = true;
+            progressBar1.Value = 0;
+            progressBar1.Maximum = (int)h;
+            progressBar1.Step = 1;
             if (image != null)
             {
                 Bitmap bp = new Bitmap(image);
                 for (int y = 0; y <= image.Height - 1; y++)
                 {
+                    progressBar1.PerformStep();
+
                     for (int x = 1; x < (image.Width - 1) / 2; x++)
                     {
                         Color oldColor1 = bp.GetPixel(x, y);
@@ -243,15 +259,21 @@ namespace Program
             }
 
             else MessageBox.Show("Выбирите файл");
+            progressBar1.Visible = false;
         }
 
         private void инверсияToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (image != null)
             {
+                progressBar1.Visible = true;
+                progressBar1.Maximum = image.Width;
+                progressBar1.Step = 1;
+                progressBar1.Value = 0;
                 Bitmap bp = new Bitmap(image);
                 for (int x = 0; x <= image.Width - 1; x++)
                 {
+                    progressBar1.PerformStep();
                     for (int y = 0; y <= image.Height - 1; y++)
                     {
                         Color oldColor = bp.GetPixel(x, y);
@@ -262,6 +284,8 @@ namespace Program
                 }
                 image = bp;
                 pictureBox1.Image = bp;
+                progressBar1.Value = 0;
+                progressBar1.Visible = false;
             }
             else MessageBox.Show("Выбирите файл");
         }
@@ -288,75 +312,28 @@ namespace Program
             kernel_h = kernel_w = 3;
         }
 
-        void blur()
+        void blur(int k)
         {
-            kernel = new int[7, 7];
+            kernel = new int[k, k];
 
-            kernel[0, 0] = 1;
-            kernel[1, 0] = 1;
-            kernel[2, 0] = 1;
-            kernel[3, 0] = 1;
-            kernel[4, 0] = 1;
-            kernel[5, 0] = 1;
-            kernel[6, 0] = 1;
+            for (int i = 0; i < k; i++) {
+                for (int j = 0; j < k;j++ )
+                {
+                    kernel[i, j] = 1;
+                }
+            }
 
-            kernel[0, 1] = 1;
-            kernel[1, 1] = 1;
-            kernel[2, 1] = 1;
-            kernel[3, 1] = 1;
-            kernel[4, 1] = 1;
-            kernel[5, 1] = 1;
-            kernel[6, 1] = 1;
-
-            kernel[0, 2] = 1;
-            kernel[1, 2] = 1;
-            kernel[2, 2] = 1;
-            kernel[3, 2] = 1;
-            kernel[4, 2] = 1;
-            kernel[5, 2] = 1;
-            kernel[6, 2] = 1;
-
-            kernel[0, 3] = 1;
-            kernel[1, 3] = 1;
-            kernel[2, 3] = 1;
-            kernel[3, 3] = 1;
-            kernel[4, 3] = 1;
-            kernel[5, 3] = 1;
-            kernel[6, 3] = 1;
-
-            kernel[0, 4] = 1;
-            kernel[1, 4] = 1;
-            kernel[2, 4] = 1;
-            kernel[3, 4] = 1;
-            kernel[4, 4] = 1;
-            kernel[5, 4] = 1;
-            kernel[6, 4] = 1;
-
-            kernel[0, 5] = 1;
-            kernel[1, 5] = 1;
-            kernel[2, 5] = 1;
-            kernel[3, 5] = 1;
-            kernel[4, 5] = 1;
-            kernel[5, 5] = 1;
-            kernel[6, 5] = 1;
-
-            kernel[0, 6] = 1;
-            kernel[1, 6] = 1;
-            kernel[2, 6] = 1;
-            kernel[3, 6] = 1;
-            kernel[4, 6] = 1;
-            kernel[5, 6] = 1;
-            kernel[6, 6] = 1;
-
-
-            div = 49;
+                div = k*k;
             offset = 0;
-            kernel_h = kernel_w = 7;
+            kernel_h = kernel_w = k;
         }
 
         void cold()
         {
-
+            progressBar1.Visible = true;
+            progressBar1.Maximum = (int)w;
+            progressBar1.Step = 1;
+            progressBar1.Value = 0;
             win = new Bitmap(Properties.Resources.ramka, (int)w, (int)h);
 
             Bitmap dst = new Bitmap(image);
@@ -365,6 +342,7 @@ namespace Program
 
             for(int x=0; x<(int)w; x++)
             {
+                progressBar1.PerformStep();
                 var color = new Color();
                 var color1 = new Color();
                 for (int y = 0; y < (int)h; y++)
@@ -392,6 +370,8 @@ namespace Program
             }
             image = dst;
             pictureBox1.Image = dst;
+            progressBar1.Value = 0;
+            progressBar1.Visible = false;
         }
 
         void kern()
@@ -401,20 +381,28 @@ namespace Program
             {
                 Bitmap bp = new Bitmap(image);
                 Bitmap bp1 = new Bitmap(image);
+                progressBar1.Visible = true;
+                progressBar1.Maximum = (int)w;
+                progressBar1.Step = 1;
+                progressBar1.Value = 0;
                 for(int x=kernel_h / 2;x< (int)w - kernel_h / 2 - 1;x++)
            {
+               progressBar1.PerformStep();
                var color = new Color();
                int rSum = 0, gSum = 0, bSum = 0;
+               
                for (int y = kernel_w / 2; y < (int)h - kernel_w / 2 - 1; y++)
                {
-
+                  
                    for (int j = 0; j < kernel_h; j++)
                    {
+                       
 
                        for (int i = 0; i < kernel_w; i++)
                        {
+                           //progressBar1.PerformStep();
                            color = bp1.GetPixel(x - kernel_h / 2 + i, y - kernel_h / 2 + j);
-
+                           
                            byte r = color.R;
                            byte g = color.G;
                            byte b = color.B;
@@ -452,7 +440,7 @@ namespace Program
                 image = bp;
                 pictureBox1.Image = bp;
             }
-
+            progressBar1.Visible = false;
 
            
         }
@@ -461,9 +449,13 @@ namespace Program
         {
            Bitmap dst = new Bitmap(image);
            Bitmap dst1 = new Bitmap(image);
-
+           progressBar1.Visible = true;
+           progressBar1.Maximum = (int)w;
+           progressBar1.Step = 1;
+           progressBar1.Value = 0;
             for(int x=0;x< (int)(w - 1);x++)
                    {
+                       progressBar1.PerformStep();
                        var color = new Color();
                        for (int y = 0; y < (int)h - 1; y++)
                        {
@@ -499,10 +491,16 @@ namespace Program
 
             image = dst;
             pictureBox1.Image = dst;
+            progressBar1.Value = 0;
+            progressBar1.Visible = false;
         }
 
         void nashville()
         {
+            progressBar1.Visible = true;
+            progressBar1.Maximum = (int)w;
+            progressBar1.Step = 1;
+            progressBar1.Value = 0;
             win = new Bitmap(Properties.Resources.nashville, (int)w, (int)h);
            Bitmap dst = new Bitmap(image);
            Bitmap dst1 = new Bitmap(image);
@@ -510,6 +508,7 @@ namespace Program
 
             for(int x=0;x<(int)w;x++)
             {
+                progressBar1.PerformStep();
                 var color = new Color();
                 var color1 = new Color();
                 for (int y = 0; y < (int)h; y++)
@@ -534,6 +533,8 @@ namespace Program
             }
             image = dst;
             pictureBox1.Image = dst;
+            progressBar1.Value = 0;
+            progressBar1.Visible = false;
             
         }
 
@@ -541,6 +542,10 @@ namespace Program
         {
             if (image != null)
             {
+                progressBar1.Visible = true;
+                progressBar1.Maximum = (int)w;
+                progressBar1.Step = 1;
+                progressBar1.Value = 0;
                 win = new Bitmap(Properties.Resources.willow1, (int)w, (int)h);
                 Bitmap dst = new Bitmap(image);
                 Bitmap dst1 = new Bitmap(image);
@@ -548,6 +553,7 @@ namespace Program
 
                 for (int x = 0; x < (int)w; x++)
                 {
+                    progressBar1.PerformStep();
                     var color = new Color();
                     var color1 = new Color();
                     for (int y = 0; y < (int)h; y++)
@@ -573,12 +579,17 @@ namespace Program
                 }
                 image = dst;
                 pictureBox1.Image = image;
+                progressBar1.Value = 0;
+                progressBar1.Visible = false;
             }
         }
 
         void heat()
         {
-            
+            progressBar1.Visible = true;
+            progressBar1.Maximum = (int)w;
+            progressBar1.Step = 1;
+            progressBar1.Value = 0;
             win = new Bitmap(Properties.Resources.vignette, (int)w, (int)h);
             Bitmap dst = new Bitmap(image);
             Bitmap dst1 = new Bitmap(image);
@@ -586,6 +597,7 @@ namespace Program
 
            for(int x=0;x<(int)w;x++)
             {
+                progressBar1.PerformStep();
                 var color = new Color();
                 var color1 = new Color();
                 for (int y = 0; y < (int)h; y++)
@@ -619,6 +631,8 @@ namespace Program
 
             image = dst;
             pictureBox1.Image = dst;
+            progressBar1.Visible = false;
+            progressBar1.Value = 0;
         }
 
         void bp()
@@ -627,9 +641,13 @@ namespace Program
             win = new Bitmap(Properties.Resources.pb, (int)w, (int)h);
             Bitmap dst = new Bitmap(image);
            Bitmap dsp = new Bitmap(win);
-
-for(int x=0;x<(int)w;x++)
+           progressBar1.Visible = true;
+           progressBar1.Maximum = (int)w;
+           progressBar1.Step = 1;
+           progressBar1.Value = 0;
+            for(int x=0;x<(int)w;x++)
             {
+                progressBar1.PerformStep();
                 var color = new Color();
                 var color1 = new Color();
                 for (int y = 0; y < (int)h; y++)
@@ -659,6 +677,8 @@ for(int x=0;x<(int)w;x++)
 
             image = dst;
             pictureBox1.Image = dst;
+            progressBar1.Value = 0;
+            progressBar1.Visible = false;
           
         }
 
@@ -672,10 +692,15 @@ for(int x=0;x<(int)w;x++)
            Bitmap dsp = new Bitmap(image);
 
            Bitmap dst = new Bitmap(win);
+           progressBar1.Visible = true;
+           progressBar1.Maximum = (int)w/2;
+           progressBar1.Step = 1;
+           progressBar1.Value = 0;
 
 
            for(int x=0; x<(int)(w / 2);x++)
            {
+               progressBar1.PerformStep();
                var color = new Color();
 
 
@@ -814,6 +839,8 @@ for(int x=0;x<(int)w;x++)
            }
            image = dst;
             pictureBox1.Image = dst;
+            progressBar1.Value = 0;
+            progressBar1.Visible = false;
 
         }
 
@@ -871,6 +898,49 @@ for(int x=0;x<(int)w;x++)
         private void progressBar1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void слабоеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (full_name_of_image != "\0")
+            {
+                blur(3);
+                kern();
+            }
+
+            else MessageBox.Show("Выбирите файл");
+        }
+
+        private void среднееToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (full_name_of_image != "\0")
+            {
+                blur(5);
+                kern();
+            }
+
+            else MessageBox.Show("Выбирите файл");
+        }
+
+        private void сильноеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (full_name_of_image != "\0")
+            {
+                blur(7);
+                kern();
+            }
+
+            else MessageBox.Show("Выбирите файл");
         }
 
      
